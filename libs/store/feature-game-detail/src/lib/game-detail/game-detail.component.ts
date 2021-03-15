@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { map } from 'rxjs/operators';
+import { Game } from '@bg-hoard/util-interface';
 
 @Component({
   selector: 'bg-hoard-game-detail',
@@ -11,6 +12,7 @@ export class GameDetailComponent {
   constructor(private route: ActivatedRoute) {}
 
   gameId$ = this.route.paramMap.pipe(
-    map((params: ParamMap) => params.get('id'))
+    map((params: ParamMap) => params.get('id')),
+    switchMap((id) => this.http.get<Game>(`/api/games/${id}`))
   );
 }
