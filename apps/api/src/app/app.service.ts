@@ -1,3 +1,5 @@
+import { Injectable } from '@nestjs/common';
+
 const games = [
   {
     id: 'settlers-in-the-can',
@@ -26,5 +28,9 @@ const games = [
   }
 ];
 
-export const getAllGames = () => games;
-export const getGame = (id: string) => games.find(game => game.id === id);
+
+@Injectable()
+export class AppService {
+  getAllGames = () => games;
+  getGame = (id: string) => games.find((game) => game.id === id);
+}
