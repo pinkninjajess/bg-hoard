@@ -344,6 +344,34 @@
           }
         }
       }
+    },
+    "shared-util-sort-project-references": {
+      "root": "libs/shared/util-sort-project-references",
+      "sourceRoot": "libs/shared/util-sort-project-references/src",
+      "projectType": "library",
+      "targets": {
+        "lint": {
+          "executor": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "libs/shared/util-sort-project-references/tsconfig.lib.json",
+              "libs/shared/util-sort-project-references/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/shared/util-sort-project-references/**/*"
+            ]
+          }
+        },
+        "test": {
+          "executor": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/util-sort-project-references"],
+          "options": {
+            "jestConfig": "libs/shared/util-sort-project-references/jest.config.js",
+            "passWithNoTests": true
+          }
+        }
+      }
     }
   }
 }

@@ -38,6 +38,9 @@
       "tags": ["scope:store", "type:e2e"],
       "implicitDependencies": ["store-ui-shared"]
     },
-    "api-util-notifications": { "tags": ["type:util", "scope:api"] }
+    "api-util-notifications": { "tags": ["type:util", "scope:api"] },
+    "shared-util-sort-project-references": {
+      "tags": ["type:util", "scope:shared"]
+    }
   }
 }

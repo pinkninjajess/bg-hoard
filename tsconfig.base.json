@@ -25,6 +25,9 @@
       "@bg-hoard/util-interface": ["libs/util-interface/src/index.ts"],
       "@bg-hoard/api/util-notifications": [
         "libs/api/util-notifications/src/index.ts"
+      ],
+      "@bg-hoard/shared/util-sort-project-references": [
+        "libs/shared/util-sort-project-references/src/index.ts"
       ]
     }
   },

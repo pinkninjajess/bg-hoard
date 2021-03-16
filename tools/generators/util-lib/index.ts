@@ -1,11 +1,14 @@
 import { Tree, formatFiles, installPackagesTask } from '@nrwl/devkit';
 import { libraryGenerator } from '@nrwl/workspace/generators';
+import { formatFiles } from '@nrwl/devkit';
 
 export default async function (host: Tree, schema: any) {
- // await libraryGenerator(host, { name: schema.name });
+  updateJson(host, 'workspace.json', updater.json) => {
+    console.log(json);
+    json.sortedJson;
+    return json;
+  });
 
-   // JSON.parse(host.read(filePath: 'workspace.json').toString());
-  //  host.write(filePath: 'workspace.json', JSON.stringify(sortedJson));
     schema.linter = 'tslint';
     schema.name = 'util-' + schema.name;
 

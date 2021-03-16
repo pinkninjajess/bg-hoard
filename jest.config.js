@@ -7,5 +7,6 @@ module.exports = {
     '<rootDir>/apps/api',
     '<rootDir>/libs/api/util-interface',
     '<rootDir>/libs/api/util-notifications',
+    '<rootDir>/libs/shared/util-sort-project-references',
   ],
 };
