@@ -26,7 +26,6 @@ import { StoreUiSharedModule } from '@bg-hoard/store/ui-shared';
       ],
       { initialNavigation: 'enabled' }
     ),
-    StoreFeatureGameDetailModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
