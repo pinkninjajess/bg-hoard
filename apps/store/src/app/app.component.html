@@ -1,5 +1,4 @@
-<bg-hoard-header> title="Board Game Hoard"</bg-hoard-header>
-<div class="container">
+<bg-hoard-header [title]="title"></bg-hoard-header><div class="container">
   <div class="games-layout">
     <mat-card class="game-card" *ngFor="let game of games | async" [routerLink]="['/game', game.id]">
       <mat-card-header class="center-content">
