@@ -15,6 +15,6 @@ export default async function (host: Tree, schema: any) {
     return () => {
       installPackagesTask(host);
     };
-  }
+
 
 }
