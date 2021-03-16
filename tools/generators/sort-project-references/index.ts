@@ -23,4 +23,4 @@ export default async function(host: Tree) {
   sortKeys(host, 'nx.json');
   await formatFiles(host);
 }
-}
+
