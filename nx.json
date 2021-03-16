@@ -16,7 +16,7 @@
   "npmScope": "bg-hoard",
   "tasksRunnerOptions": {
     "default": {
-      "runner": "@nrwl/workspace/tasks-runners/default",
+      "runner": "@nrwl/nx-cloud",
       "options": {
         "cacheableOperations": [
           "build",
@@ -24,42 +24,79 @@
           "test",
           "e2e",
           "build-storybook"
-        ]
+        ],
+        "accessToken": "ZDY4Zjg4NzMtNTkzNi00ZGY4LWJiMWYtMWM2OGY5ZjgxNGM5fHJlYWQtd3JpdGU=",
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
       }
     }
   },
   "projects": {
     "api": {
-      "tags": ["scope:api", "type:app"]
+      "tags": [
+        "scope:api",
+        "type:app"
+      ]
     },
     "api-util-notifications": {
-      "tags": ["type:util", "scope:api"]
+      "tags": [
+        "type:util",
+        "scope:api"
+      ]
     },
     "shared-util-sort-project-references": {
-      "tags": ["type:util", "scope:shared"]
+      "tags": [
+        "type:util",
+        "scope:shared"
+      ]
     },
     "store": {
-      "tags": ["scope:store", "type:app"]
+      "tags": [
+        "scope:store",
+        "type:app"
+      ]
     },
     "store-e2e": {
-      "tags": ["scope:store", "type:test"],
-      "implicitDependencies": ["store"]
+      "tags": [
+        "scope:store",
+        "type:test"
+      ],
+      "implicitDependencies": [
+        "store"
+      ]
     },
     "store-feature-game-detail": {
-      "tags": ["scope:store", "type:feature"]
+      "tags": [
+        "scope:store",
+        "type:feature"
+      ]
     },
     "store-ui-shared": {
-      "tags": ["scope:store", "type:ui"]
+      "tags": [
+        "scope:store",
+        "type:ui"
+      ]
     },
     "store-ui-shared-e2e": {
-      "tags": ["scope:store", "type:e2e"],
-      "implicitDependencies": ["store-ui-shared"]
+      "tags": [
+        "scope:store",
+        "type:e2e"
+      ],
+      "implicitDependencies": [
+        "store-ui-shared"
+      ]
     },
     "store-util-formatters": {
-      "tags": ["scope:store", "type:util"]
+      "tags": [
+        "scope:store",
+        "type:util"
+      ]
     },
     "util-interface": {
-      "tags": ["scope:shared", "type:util"]
+      "tags": [
+        "scope:shared",
+        "type:util"
+      ]
     }
   }
 }
