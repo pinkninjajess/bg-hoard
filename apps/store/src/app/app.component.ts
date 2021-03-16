@@ -10,7 +10,7 @@ import { Game } from '@bg-hoard/util-interface';
 })
 export class AppComponent {
   constructor(private http: HttpClient) {
-    console.log("component constructed")
+    console.log('component constructed');
   }
 
   title = 'Board Game Hoard';
