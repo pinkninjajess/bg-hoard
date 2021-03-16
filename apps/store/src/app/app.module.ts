@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import { StoreUiSharedModule } from '@bg-hoard/store/ui-shared';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -27,7 +28,9 @@ import { StoreUiSharedModule } from '@bg-hoard/store/ui-shared';
       { initialNavigation: 'enabled' }
     ),
   ],
-  providers: [],
+  providers: [{  provide: 'baseUrl',
+                 useValue: environment.apiUrl
+               }],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
