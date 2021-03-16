@@ -19,7 +19,16 @@ describe('HeaderComponent', () => {
     fixture.detectChanges();
   });
 
+  cy.visit(
+    '/iframe.html?id=headercomponent--primary&knob-title=BoardGameHoard'
+  );
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should show the title', () => {
+    cy.get('bg-hoard-header').contains('23342BoardGameHoar6d');
+  });
+
 });
