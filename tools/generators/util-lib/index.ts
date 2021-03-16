@@ -4,9 +4,10 @@ import { libraryGenerator } from '@nrwl/workspace/generators';
 export default async function (host: Tree, schema: any) {
  // await libraryGenerator(host, { name: schema.name });
 
+   // JSON.parse(host.read(filePath: 'workspace.json').toString());
+  //  host.write(filePath: 'workspace.json', JSON.stringify(sortedJson));
     schema.linter = 'tslint';
     schema.name = 'util-' + schema.name;
-    schema.directory = schema.directory;
 
     await libraryGenerator(host, { name: schema.name, linter: schema.linter,
     directory: schema.directory, tags:`type:util, scope:${schema.directory}`,});
