@@ -1,26 +1,65 @@
 {
-  "npmScope": "bg-hoard",
-  "affected": { "defaultBase": "master" },
   "implicitDependencies": {
     "workspace.json": "*",
-    "package.json": { "dependencies": "*", "devDependencies": "*" },
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
     "tsconfig.base.json": "*",
     "tslint.json": "*",
     ".eslintrc.json": "*",
     "nx.json": "*"
   },
+  "affected": {
+    "defaultBase": "master"
+  },
+  "npmScope": "bg-hoard",
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
-      "options": { "cacheableOperations": ["build", "lint", "test", "e2e"] }
+      "options": {
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e",
+          "build-storybook"
+        ]
+      }
     }
   },
   "projects": {
-    "store": { "tags": [] },
-    "store-e2e": { "tags": [], "implicitDependencies": ["store"] },
-    "store-ui-shared": { "tags": [] },
-    "store-util-formatters": { "tags": [] },
-    "store-feature-game-detail": { "tags": [] },
-    "api": { "tags": [] }
+    "api": {
+      "tags": ["scope:api", "type:app"]
+    },
+    "api-util-notifications": {
+      "tags": ["type:util", "scope:api"]
+    },
+    "shared-util-sort-project-references": {
+      "tags": ["type:util", "scope:shared"]
+    },
+    "store": {
+      "tags": ["scope:store", "type:app"]
+    },
+    "store-e2e": {
+      "tags": ["scope:store", "type:test"],
+      "implicitDependencies": ["store"]
+    },
+    "store-feature-game-detail": {
+      "tags": ["scope:store", "type:feature"]
+    },
+    "store-ui-shared": {
+      "tags": ["scope:store", "type:ui"]
+    },
+    "store-ui-shared-e2e": {
+      "tags": ["scope:store", "type:e2e"],
+      "implicitDependencies": ["store-ui-shared"]
+    },
+    "store-util-formatters": {
+      "tags": ["scope:store", "type:util"]
+    },
+    "util-interface": {
+      "tags": ["scope:shared", "type:util"]
+    }
   }
 }

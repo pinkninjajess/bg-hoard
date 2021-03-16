@@ -6,9 +6,7 @@ import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
 import { StoreUiSharedModule } from '@bg-hoard/store/ui-shared';
-import {
-  StoreFeatureGameDetailModule,
-} from '@bg-hoard/store/feature-game-detail';
+
 
 @NgModule({
   declarations: [AppComponent],
